@@ -1,0 +1,6 @@
+development:
+adapter: postgresql
+database: development
+username: w4ik
+password: wrench
+host: localhost
