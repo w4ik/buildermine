@@ -1,9 +1,9 @@
 #The environment variable DATABASE_URL should be in the following format:
 # => postgres://{user}:{password}@{host}:{port}/path
 configure :production, :development do
-        db = URI.parse(ENV['HEROKU_POSTGRESQL_YELLOW_URL'] || 'postgres://localhost/bensinatra')
+        #db = URI.parse(ENV['HEROKU_POSTGRESQL_YELLOW_URL'] || 'postgres://localhost/bensinatra')
 
-        #db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/bensinatra')
+        db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/bensinatra')
 
 	ActiveRecord::Base.establish_connection(
                 :adapter => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
