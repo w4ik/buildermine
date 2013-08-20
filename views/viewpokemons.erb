@@ -1,0 +1,12 @@
+<h3>All Pokemons</h3>i
+<ul>
+<% @pokemons.each do |pokemon| %>
+  <li>
+    <%= pokemon.name %>
+  </li>
+  <li>
+    <%= pokemon.power %>
+  </li>
+<% end %>
+</ul>
+<a href="/">Back to Home</a>
