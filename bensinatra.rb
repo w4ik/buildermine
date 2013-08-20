@@ -51,8 +51,7 @@ get '/viewpokemons' do
 end
 
 post '/testjson' do
-  data = JSON.parse(request.body.read)
-  json data
+  #data = JSON.parse(request.body.read)
+  #json data
+  'Does this work'
 end
-
-
