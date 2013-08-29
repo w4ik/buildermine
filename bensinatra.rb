@@ -2,8 +2,8 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/json'
 require './config/environments' #database configuration
-require './models/model'
-require './models/pokemon'
+require './models/buildermine'
+#require './models/pokemon'
 require 'json'
 require 'bundler/setup'
 

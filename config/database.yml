@@ -1,6 +1,6 @@
 development:
 adapter: postgresql
-database: development
+database: buildermine
 username: w4ik
 password: wrench
 host: localhost
