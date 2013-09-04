@@ -2,13 +2,13 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/json'
 require './config/environments' #database configuration
-require './models/buildermine'
+require './models/task'
 #require './models/pokemon'
 require 'json'
 require 'bundler/setup'
 
 get '/' do
-  #"hey this is Ben's Sinatra site. Might use it as an API site"
+  #"Buildermine, use this as the/an api?"
   erb :index	
 end
 
@@ -17,17 +17,19 @@ get '/testreturn' do
  end
 
 post '/submit' do
-  @model = Model.new(params[:model])
-  if @model.save
-    redirect '/models'
+  #Try different names or try make a different class named Task	
+  @task = Task.new(params[:task])
+  if @task.save
+    redirect '/tasks'
   else
     "Sorry, there was an error!"
   end
 end
 
-get '/models' do
-  @models = Model.all
-  erb :models
+get '/tasks' do
+  #"Save Worked?"	
+  @tasks = Task.all
+  erb :tasks
 end
 
 post '/submitpokemon' do

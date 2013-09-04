@@ -1,0 +1,13 @@
+<h3>All Tasks</h3>
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <%= task.description %>
+    <form action="/tosubtask" method="POST" />
+      <input style="display: none" type="text" name="task[description]" value=<%= task.description %> />
+      <input type="submit" value="View/Create Subtask(s)" />
+    </form>  
+  </li>
+<% end %>
+</ul>
+<a href="/">Back to Home</a>

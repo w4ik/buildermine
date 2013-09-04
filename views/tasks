@@ -1,0 +1,9 @@
+<h3>All Tasks</h3>
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <%= task.description %>
+  </li>
+<% end %>
+</ul>
+<a href="/">Back to Home</a>
