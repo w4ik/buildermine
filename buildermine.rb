@@ -32,6 +32,11 @@ get '/tasks' do
   erb :tasks
 end
 
+post 'tosubtask' do
+
+
+end
+
 post '/submitpokemon' do
   @pokemon = Pokemon.new(params[:pokemon])
   if @pokemon.save
